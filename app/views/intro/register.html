@@ -1,0 +1,81 @@
+﻿<div class="container fill slide-in-from-left" ng-class="{{pageClass}}">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <img src="assets/img/logo.png" alt="logo" />
+
+        </div>
+    </div>
+    <form class="form-group" id="register-form" ng-class="(lang == 'he')?'rtl':''">
+        <div class="row">
+            <div class="col-xs-12">
+                <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="email" ng-model="email" placeholder="{{langString[lang].email}}" ng-blur="checkIfUserExists()"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="password" ng-model="password" placeholder="{{langString[lang].password}}" ng-blur="checkIfUserExists()"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="text" ng-model="name" placeholder="{{langString[lang].name}}" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a ng-click="loginToApp()" class="btn general-btn btn-shadow round-btn orange-btn register-btn">{{langString[lang].btn}}</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="popup-overlay" ng-show="showPopup" ng-click="showHidePopup(0);" ng-class="(lang == 'he')?'rtl':''">
+
+    <div class="popup-register popup-bg-general">
+        <h2 class="register-title">{{langString[lang].registerTitle}}</h2>
+        <form class="form-group" id="register-form" ng-class="(lang == 'he')?'rtl':''" ng-show="isShown">
+            <div class="row">
+                <div class="col-xs-12">
+                    <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="email" ng-model="email" placeholder="{{langString[lang].email}}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="text" ng-model="name" placeholder="{{langString[lang].name}}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="text" ng-model="lastName" placeholder="{{langString[lang].lastName}}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="text" ng-model="phone" placeholder="{{langString[lang].phone}}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="text" ng-model="company" placeholder="{{langString[lang].company}}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="text" ng-model="department" placeholder="{{langString[lang].department}}" />
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-xs-12" ng-class="(lang == 'he')?'text-left':'text-right'">
+                <a ng-click="showForm()" class="btn grey-color">{{langString[lang].cancel}}</a>
+                <a ng-click="showForm()" class="btn grey-color" style="font-weight:bold;">{{langString[lang].ok}}</a>
+            </div>
+        </div>
+    </div>
+
+</div>

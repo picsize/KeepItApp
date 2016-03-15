@@ -1,0 +1,388 @@
+﻿
+/*#region dots*/
+.dot_0 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.0s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 0.0s;
+    -o-animation-delay: 0.0s;
+    animation-delay: 0.0s;
+}
+
+.dot_1 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.2s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.dot_2 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.dot_3 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.4s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.dot_4 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.dot_5 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.6s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.dot_6 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.7s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 0.7s;
+    -o-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+.dot_7 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.8s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.dot_8 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.9s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+.dot_9 {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 1s;
+    -moz-animation: dot 1.3s infinite;
+    -o-animation: dot 1.3s infinite;
+    animation: dot 1.3s infinite;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes dot {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes dot {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dot {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*#endregion*/
+
+/*#region Wheel*/
+
+.startFade {
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+#wheel.showWheel {
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+    opacity: 1;
+}
+
+.fadeIn {
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+    opacity: 1;
+}
+
+/*#endregion*/
+
+/*#region Pages*/
+
+.fade-out-page {
+}
+
+.my-animation.ng-enter {
+    /* standard transition code */
+    -moz-transition: 1s linear all;
+    -o-transition: 1s linear all;
+    -webkit-transition: 1s linear all;
+    transition: 1s linear all;
+    opacity: 0;
+}
+
+.my-animation.ng-enter-stagger {
+    /* this will have a 100ms delay between each successive leave animation */
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    /* As of 1.4.4, this must always be set: it signals ngAnimate
+    to not accidentally inherit a delay property from another CSS class */
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+}
+
+.my-animation.ng-enter.ng-enter-active {
+    /* standard transition styles */
+    opacity: 1;
+}
+
+.slide-in-from-left {
+    -webkit-animation-name: slide; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    -moz-animation-name: slide;
+    -o-animation-name: slide;
+    animation-name: slide;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes slide {
+    from {
+        left: -24em;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slide {
+    from {
+        left: -24em;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+/*#endregion*/
+
+/*#region Settings*/
+
+.slide-down {
+    -webkit-animation-name: slide-down; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+    -moz-animation-name: slide-down;
+    -o-animation-name: slide-down;
+    animation-name: slide-down;
+    -moz-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+
+@keyframes slide-down {
+    from {
+        margin-top:0;
+    }
+
+    to {
+        margin-top:30%;
+    }
+}
+
+@-webkit-keyframes slide-down {
+    from {
+        margin-top:0;
+    }
+
+    to {
+        margin-top:30%;
+    }
+}
+
+.slide-up {
+        -webkit-animation-name: slide-up; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+    -moz-animation-name: slide-up;
+    -o-animation-name: slide-up;
+    animation-name: slide-up;
+    -moz-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+@keyframes slide-up {
+    from {
+        margin-top:30%;
+    }
+
+    to {
+        margin-top:0;
+    }
+}
+
+@-webkit-keyframes slide-up {
+     from {
+        margin-top:30%;
+    }
+
+    to {
+        margin-top:0;
+    }
+}
+
+
+/*#endregion*/
+
+/*#region Logo*/
+
+.big-to-small
+{
+    -webkit-animation-name: bigToSmall; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
+    -moz-animation-name: bigToSmall;
+    -o-animation-name: bigToSmall;
+    animation-name: bigToSmall;
+    -moz-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s;
+}
+
+@-webkit-keyframes bigToSmall
+{
+    from
+    {
+        width: 90%;
+        margin-top: 85%;
+    }
+
+    to
+    {
+        width: 40%;
+        margin-top: 5%;
+    }
+}
+
+@-moz-keyframes bigToSmall
+{
+    from
+    {
+        width: 90%;
+        margin-top: 85%;
+    }
+
+    to
+    {
+        width: 40%;
+        margin-top: 5%;
+    }
+}
+
+@keyframes bigToSmall
+{
+    from
+    {
+        width: 90%;
+        margin-top: 85%;
+    }
+
+    to
+    {
+        width: 40%;
+        margin-top: 5%;
+    }
+}
+
+/*#endregion*/

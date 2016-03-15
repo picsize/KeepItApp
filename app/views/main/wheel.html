@@ -1,0 +1,74 @@
+﻿
+<div class="container white-bg fill" ng-class="{{pageClass}}">
+    <div class="row intro-bg">
+        <div class="col-xs-12">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">
+                            <img alt="Brand" src="assets/img/logo.png">
+                        </a>
+                        <span class="name-and-score" ng-class="(lang == 'he')?'rtl':''">
+                            <label class="orange-text">{{userName}}</label>
+                            <label class="white-color">{{langString[lang].score}} {{totalCredits}}</label>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row" ng-class="(lang == 'he')?'rtl':''">
+        <div class="col-xs-12 text-center">
+            <h4 class="grey-color" id="wheelTitle">{{langString[lang].title}}</h4>
+        </div>
+    </div>
+
+    <div class="row slide-in-from-left" ng-class="(lang == 'he')?'rtl':''">
+        <div class="col-xs-12 circle-container text-center {{lang}}">
+            <div id="wheel" ng-class="(isSpinning) ? 'showWheel' : ''"></div>
+            <img ng-src="assets/img/{{startImg}}" ng-click="spin(true);" ng-show="showSpinImg" ng-class="(!showSpinImg) ? 'startFade' : ''"/>
+        </div>
+    </div>
+
+    <div class="row select-catagory" ng-class="{'rtl': lang == 'he', 'fadeIn': isSpinning}" ng-show="isSpinning"> 
+        <div class="col-xs-12 text-center">
+            <div class="dots-animation" ng-show="showDots">
+                <span ng-repeat="category in categoriesList" class="dots dot_{{$index}}" style="background-color:{{category.color}};"></span>
+            </div>
+            <div ng-show="!showDots">
+                <label class="category-label" style="color:{{selectedCategoryColor}}">{{selectedCategory}}</label>
+                <a href="#/question" style="color:#fff;background-color:{{selectedCategoryColor}}" class="btn category-link">{{langString[lang].link}}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row another" ng-class="{'rtl': lang == 'he', 'fadeIn': !showDots}" ng-show="!showDots">
+        <div class="col-xs-12 text-center">
+            <label ng-click="checkIfCanSpin()" ng-show="!showSpinImg" ng-bind="anotherText"></label>
+            <img src="assets/img/3887.png" ng-show="!showSpinImg" ng-click="setAlarm()"/>
+            <input type="text" class="clock" id="wheelAlarm" style="visibility:hidden;position:absolute;"/>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-overlay" ng-show="showPopup" ng-click="showHidePopup(0);" ng-class="(lang == 'he')?'rtl':''">
+
+    <div class="popup-category popup-bg-general" ng-class="(lang == 'he')?'rtl':''">
+        <h2 class="category-list-title">{{langString[lang].categoryListTitle}}</h2>
+        <ul class="category-list">
+            <li ng-repeat="cat in categoriesList" ng-click="setLink(cat.alt, cat.id, cat.color, cat.icon);">
+                <img src="{{cat.icon2}}" /><a ng-bind="(lang == 'he')? cat.title_he : cat.title_en" class="grey-color"></a>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-xs-12" ng-class="(lang == 'he')?'text-left':'text-right'">
+                <a ng-click="showHidePopup(1);" class="btn grey-color">{{langString[lang].cancel}}</a>
+                <a ng-click="goToQuestion();" class="btn grey-color" style="font-weight:bold;">{{langString[lang].ok}}</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+

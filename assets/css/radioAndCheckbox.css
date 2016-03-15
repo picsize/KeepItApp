@@ -1,0 +1,201 @@
+
+/*#region Alarms Radio*/
+
+input[type=radio].black-radio {
+    position: absolute;
+    z-index: -1000;
+    right: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    display:none;
+}
+
+    input[type=radio].black-radio + label.black-radio-label {
+        padding-left: 23px;
+        padding-right: 0;
+        height: 18px;
+        display: inline-block;
+        line-height: 18px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        vertical-align: middle;
+        cursor: pointer;
+        font-size: 117%;
+    }
+
+.rtl input[type=radio].black-radio + label.black-radio-label {
+    background-position: 100% 0;
+    padding-right: 23px;
+    padding-left: 0;
+}
+
+input[type=radio].black-radio:checked + label.black-radio-label {
+    background-position: 0 -18px;
+}
+
+.rtl input[type=radio].black-radio:checked + label.black-radio-label {
+    background-position: 100% -18px;
+}
+
+label.black-radio-label {
+    background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_5c98e1b48cfc20eb67c467ebaba5ef67.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*#endregion*/
+
+/*#region Days Checkbox*/
+
+input[type=checkbox].days {
+    position: absolute;
+    z-index: -1000;
+    right: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    display:none;
+}
+
+    input[type=checkbox].days + label.days-label {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 117%;
+    }
+
+    input[type=checkbox].days:checked + label.days-label {
+        background-color: rgba(129, 128, 126, 0.65);
+        padding-left: 11px;
+        color: #fff;
+        border: none;
+    }
+
+.rtl input[type=checkbox].days:checked + label.days-label {
+    padding-right: 11px;
+    padding-left: 0;
+}
+
+label.days-label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 50%;
+    /*padding-left:10px;*/
+    text-align:center;
+    line-height: 28px;
+    vertical-align: middle;
+    border: 1px solid rgba(129, 128, 126, 0.65);
+    width: 30px;
+    height: 30px;
+    margin: 0 1%;
+}
+
+.rtl label.days-label {
+    padding-left: 0;
+    padding-right: 0;
+    text-align:center;
+}
+
+/*#endregion*/
+
+/*#region Alarms Checkbox*/
+
+input[type=checkbox].alarms-checkbox {
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    display:none;
+}
+
+    input[type=checkbox].alarms-checkbox + label.alarms-checkbox-label {
+        padding-left: 24px;
+        height: 19px;
+        display: inline-block;
+        line-height: 19px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+.rtl input[type=checkbox].alarms-checkbox + label.alarms-checkbox-label {
+    padding-right: 24px;
+    padding-left:0;
+    background-position: 100% 0;
+}
+
+    input[type=checkbox].alarms-checkbox:checked + label.alarms-checkbox-label {
+        background-position: 0 -19px;
+    }
+
+.rtl input[type=checkbox].alarms-checkbox:checked + label.alarms-checkbox-label {
+    background-position: 100% -19px;
+}
+
+label.alarms-checkbox-label {
+    background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_584715bec9b728f21a7a9ecb1b4eecf9.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 117%;
+}
+
+
+/*#endregion*/
+
+/*#region Multiple Answers*/
+
+input[type="checkbox"].multiple {
+    display: none;
+}
+
+input[type="checkbox"].multiple + label {
+    background-color: transparent;
+}
+
+input[type=checkbox].multiple:checked + label {
+    background-color: rgba(129, 128, 126, 0.65);
+    color:#fff;
+}
+
+/*#endregion*/
+
+/*#region One Answer*/
+
+input[type="radio"].one-answer {
+    display: none;
+}
+
+    input[type="radio"].one-answer + label {
+        background-color: transparent;
+    }
+
+    input[type="radio"].one-answer:checked + label {
+        background-color: rgba(129, 128, 126, 0.65);
+        color:#fff;
+    }
+
+/*#endregion*/

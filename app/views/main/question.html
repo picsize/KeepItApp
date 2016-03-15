@@ -1,0 +1,167 @@
+﻿
+<style>
+    {{pageStyle}}
+</style>
+
+<div class="container white-bg fill" ng-class="{{pageClass}}">
+
+    <div class="row white-bg">
+        <div class="col-xs-12">
+            <nav class="navbar navbar-default">
+                <div class="container" style="padding:0;">
+                    <div class="navbar-header">
+                        <div class="col-xs-6">
+                            <div class="col-xs-6 grey-bg icon-holder text-center" ng-show="withCredits">
+                                <img src="assets/img/8792.png">
+                                <span class="credit" ng-class="(thisQuestion.credits >= 10) ? 'bigger10': null">{{thisQuestion.credits}}</span>
+                            </div>
+                            <div class="col-xs-6 grey-bg icon-holder text-center" ng-show="withCredits">
+                                <img src="assets/img/8793.png">
+                                <span class="bonus" ng-class="(thisQuestion.bonus > 10) ? 'bigger10': null" ng-bind="thisQuestion.bonus"></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6" ng-class="(lang == 'he') ? 'rtl': ''">
+                            <div class="icon-and-recent" ng-class="{'grey-bg' : !isNew}">
+                                <div ng-show="!isNew" class="recently break-line float-left" ng-class="{'text-right':lang=='he'}"><span>{{langString[lang].recently}}</span></div>
+                                <img class="question-type float-right" src="{{catIcon}}" style="background-color:{{catColor}}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row slide-in-from-left">
+        <div class="question intro-bg">
+            <h3 class="white-color" ng-class="(lang == 'he') ? 'rtl': ''">{{thisQuestion.questionDesc}}</h3>
+        </div>
+    </div>
+
+    <div class="row slide-in-from-left">
+        <div class="col-xs-12 simpleDemo">
+            <!--multi-->
+            <div class="answer-holder" ng-show="multipleAnswers">
+                <ul class="answers list-decimal" ng-class="(lang == 'he') ? 'rtl': ''" >
+                    <li class="answer" ng-repeat="answer in answerDesc track by $index">
+                        <input type="checkbox" name="{{answer}}" class="multiple" data-answer="{{answer}}"/><label for="{{answer}}" data-id="multi_{{answersIds[$index]}}" ng-click="checkMultiAnswer(answer, 'multi_'+answersIds[$index])">{{$index + 1}}. {{answer}}</label>
+                    </li>
+                </ul>
+            </div>
+
+            <!--one answer-->
+            <div class="answer-holder" ng-show="oneAnswer">
+                <ul class="answers list-decimal" ng-class="(lang == 'he') ? 'rtl': ''">
+                    <li class="answer" ng-repeat="answer in answerDesc track by $index">
+                        <input type="radio" name="one-answer" class="one-answer" data-answer="{{answer}}" /><label data-id="one_{{answersIds[$index]}}" ng-click="checkOneAnswer('one_'+answersIds[$index])">{{$index + 1}}. {{answer}}</label>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <!--order-->
+            <div ng-show="order" class="order answer-holder">
+                <ul class="answers list-decimal" ng-class="(lang == 'he') ? 'rtl float-right': 'float-left'">
+                    <li class="answer" ng-repeat="item in userAnswers track by $index"><label>{{$index+1}}.</label></li>
+                </ul>
+                <ul id="order-answers" as-sortable="sortOptions" ng-model="userAnswers" class="answers list-decimal draglist" ng-class="(lang == 'he') ? 'rtl float-left': 'float-right'">
+                    <li ng-repeat="item in userAnswers track by $index" as-sortable-item class="answer">
+                        <label as-sortable-item-handle>{{item}}</label>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container white-bg">
+        <div class="row actions">
+            <div class="col-xs-12">
+                <div class="helpers" ng-class="(lang=='he') ? 'rtl text-right float-right':'text-left float-left'">
+                    <img src="assets/img/3887.png" ng-click="setQuestionAlarm()" id="bell"/>
+                    <img src="assets/img/megnifer.png" ng-click="showHidePopup('hint')" ng-show="showHint" id="hint"/>
+                    <input type="text" class="clock" id="wheelAlarm" style="visibility:hidden;position:absolute;" />
+                    <img src="assets/img/safe weel.png" ng-click="shareQuestion()" id="share"/>
+                </div>
+                <div class="ok" ng-class="(lang=='he') ? 'float-right rtl':'float-left'">
+                    <button ng-click="checkAnswer()" style="color:{{catColor}}" disabled>ok</button>
+                </div>
+            </div>
+            <div class="col-xs-12 google-search">
+                <!--<div class="gcse-search" data-newWindow="true" data-queryParameterName="search"></div>-->
+                <!--<gcse:searchbox-only></gcse:searchbox-only>-->
+                <input placeholder="Google" ng-keydown="search($event)" />
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="popup-overlay" ng-show="showPopup" ng-click="goToFinalPage()">
+
+    <div class="popup-bonus popup-bg-message" ng-show="bonus">
+        <p ng-class="(lang == 'he') ? 'rtl': ''">
+            {{langString[lang].bonusFirstLine}}.<br />
+            {{langString[lang].bonusSecondLine}}
+        </p>
+        <button ng-click="showHidePopup('google', $event)">{{langString[lang].popupBtn}}</button>
+    </div>
+
+    <div class="popup-google popup-bg-message" ng-show="google" ng-class="{'he':lang=='he'}">
+        <p ng-class="(lang == 'he') ? 'rtl': ''">
+            {{langString[lang].googleText}}
+        </p>
+        <button ng-click="showHidePopup(null,$event)" ng-class="(lang == 'he') ? 'rtl': ''">{{langString[lang].popupBtn}}</button>
+    </div>
+
+    <div class="popup-intro-5sec popup-bg-message" ng-show="intro5sec || intro2days">
+        <p class="break-line" ng-class="(lang == 'he') ? 'rtl text-right': ''" ng-show="intro5sec">{{langString[lang].intro5sec}}</p>
+        <p class="break-line" ng-class="(lang == 'he') ? 'rtl text-right': ''" ng-show="intro2days">{{langString[lang].intro2days}}</p>
+        <button ng-click="showHidePopup(null); checkConditions();">{{langString[lang].popupBtn}}</button>
+    </div>
+
+    <div class="popup-5sec popup-bg-message" ng-show="popup5sec || popup2days">
+        <p class="break-line" ng-class="(lang == 'he') ? 'rtl text-right': ''" ng-show="popup5sec">{{langString[lang].popup5sec}}</p>
+        <p class="break-line" ng-class="(lang == 'he') ? 'rtl text-right': ''" ng-show="popup2days">{{langString[lang].popup2days}}{{thisQuestion.lastAnswerBonus*1}}{{langString[lang].popup2days_2}}</p>
+    </div>
+
+    <div class="popup-hint popup-bg-general popup-answer" ng-show="hintPopup">
+        <p class="text-center" ng-class="(lang == 'he') ? 'rtl': ''">
+            <span>{{langString[lang].clueFirst}} {{thisQuestion.clue}} {{langString[lang].points}}</span>
+            <span>{{langString[lang].clueSecond}}</span>
+        </p>
+        <div class="row">
+            <div class="col-xs-12" ng-class="(lang == 'he')?'text-left':'text-right'">
+                <button ng-click="getHint()" class="btn grey-color" style="font-weight:bold;" ng-class="{'float-right': lang != 'he'}">{{langString[lang].ok}}</button>
+                <button ng-click="showHidePopup(null,$event);" class="btn grey-color">{{langString[lang].cancel}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-answer popup-bg-general" ng-show="general" ng-click="goToFinalPage()">
+        <p ng-class="{'rtl': lang=='he'}" class="text-center">
+            <span>{{blessing}}</span>
+            <span>{{answerText}}</span>
+            <span class="orange-text" ng-class="{'break-line': wrong, 'text-right': wrong && lang=='he', 'text-left': wrong && lang != 'he'}">{{points}}</span>
+        </p>
+        <button ng-hide="wrong" class="keepitApp-btn" ng-class="(lang == 'he') ? 'rtl': ''" ng-click="goToFinalPage()">Keep it up!</button>
+        <p class="wrong" ng-hide="!wrong" ng-class="(lang == 'he') ? 'rtl text-right': 'text-left'" style="font-weight:bold;">
+            {{langString[lang]['wrong'].firstLine}}<br />{{langString[lang]['wrong'].lastLine}}
+        </p>
+        <img class="organization wrong" src="{{Organizations['Clalit'].wrong}}" ng-show="wrong && showOrganization" />
+        <img class="organization corrent" src="{{Organizations['Clalit'].corrent}}" ng-show="!wrong && showOrganization" />
+    </div>
+
+    <div class="popup-answer popup-bg-general second-time" ng-show="secondTimePopup">
+        <p class="break-line" ng-class="(lang == 'he') ? 'rtl text-right': ''">{{langString[lang]['correct'].secondTime}}</p>
+    </div>
+
+    <div class="popup-answer popup-old-question popup-bg-general" ng-show="oldQuestion">
+        <p class="break-line" ng-class="(lang == 'he') ? 'rtl text-right': 'text-left'" ng-show="!withCredits">{{langString[lang]['correct'].oldQuestion}}</p>
+        <p class="break-line" ng-class="(lang == 'he') ? 'rtl text-right': 'text-left'" ng-show="withCredits">{{langString[lang]['wrong'].oldQuestion}}</p>
+        <button ng-click="showHidePopup(null)" ng-class="(lang == 'he') ? 'float-left': 'float-right'">{{langString[lang].ok}}</button>
+    </div>
+
+</div>

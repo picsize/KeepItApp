@@ -1,0 +1,1084 @@
+﻿/*#region 320/480 iPhone 4, iPhone 3 3GS*/
+
+@media screen and (min-width:320px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5)‏
+{
+
+    /*#region General*/
+
+    .popup-language
+    {
+        top: 25%;
+    }
+
+        .popup-language.main
+        {
+            top: 51%;
+        }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 27%;
+    }
+
+    .icon-and-recent
+    {
+        height: 44px;
+    }
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .rtl input[type=checkbox].days:checked + label.days-label
+    {
+        padding-right: 0 !important;
+    }
+
+    .popup-google.he
+    {
+        top: 66%;
+    }
+
+    .he #wheel
+    {
+        width: 230px;
+        height: 230px;
+        right: 10%;
+    }
+
+    .rtl .circle-container img
+    {
+        width: 20%;
+        top: 36.5%;
+        left: 40%;
+    }
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 28%;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 61%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+    input[type=checkbox].days:checked + label.days-label
+    {
+        padding: 2px;
+        text-align: center;
+    }
+
+    .popup-google
+    {
+        top: 61%;
+    }
+
+    #wheel
+    {
+        width: 230px;
+        height: 230px;
+        right: -10.5%;
+    }
+
+    .circle-container img
+    {
+        width: 20%;
+        top: 36.5%;
+        left: 40%;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 28%;
+    }
+
+
+
+
+    /*#endregion*/
+
+}
+
+/*#endregion*/
+
+/*#region 320/568 iPhone 5 */
+
+@media screen and (min-width:320px) and (min-height:568px)
+{
+
+
+    /*#region General*/
+
+    .popup-language
+    {
+        top: 21%;
+    }
+
+        .popup-language.main
+        {
+            top: 44%;
+        }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 27%;
+    }
+
+    .icon-and-recent
+    {
+        height: 47px;
+    }
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .he #wheel
+    {
+        width: 230px;
+        height: 230px;
+        right: 10%;
+    }
+
+    .popup-google.he
+    {
+        top: 71%;
+    }
+
+    .rtl .circle-container img
+    {
+        width: 20%;
+        top: 36.5%;
+        left: 40.2%;
+    }
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 29%;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 57%;
+    }
+
+    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+    .popup-google
+    {
+        top: 66%;
+    }
+
+    #wheel
+    {
+        width: 230px;
+        height: 230px;
+        right: -10.5%;
+    }
+
+    .circle-container img
+    {
+        width: 20%;
+        top: 36.5%;
+        left: 40.2%;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 29%;
+    }
+
+    .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+
+    /*#endregion*/
+}
+
+/*#endregion*/
+
+/*#region 375/667 iPhone 6 */
+
+@media screen and (min-width:375px)
+{
+
+    /*#region General*/
+
+    .popup-language
+    {
+        top: 21%;
+    }
+
+        .popup-language.main
+        {
+            top: 42%;
+        }
+
+    .popup-google.he
+    {
+        top: 74%;
+    }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 27%;
+    }
+
+    .icon-and-recent
+    {
+        height: 57px;
+    }
+
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .he #wheel
+    {
+        width: 300px !important;
+        height: 300px !important;
+        right: 7% !important;
+    }
+
+    .rtl .circle-container img
+    {
+        width: 23% !important;
+        top: 36% !important;
+        left: 38% !important;
+    }
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 32% !important;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 54% !important;
+    }
+
+    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+
+    .popup-google
+    {
+        top: 66%;
+    }
+
+    #wheel
+    {
+        width: 300px !important;
+        height: 300px !important;
+        right: -7.5% !important;
+    }
+
+    .circle-container img
+    {
+        width: 22.5% !important;
+        top: 36.4% !important;
+        left: 39.8% !important;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 29% !important;
+    }
+
+    .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+}
+
+/*#endregion*/
+
+/*#region 414/736 iPhone 6+ */
+
+@media screen and (min-width:414px)
+{
+
+
+    /*#region General*/
+
+    .popup-language
+    {
+        top: 22% !important;
+    }
+
+        .popup-language.main
+        {
+            top: 42%;
+        }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 16%;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 52% !important;
+    }
+
+    .icon-and-recent
+    {
+        height: 64px;
+    }
+
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .he #wheel
+    {
+        width: 320px !important;
+        height: 320px !important;
+        right: 9% !important;
+    }
+
+    .popup-google.he
+    {
+        top: 66%;
+    }
+
+    .rtl .circle-container img
+    {
+        width: 21.7% !important;
+        top: 36.4% !important;
+        left: 38.5% !important;
+    }
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 33%;
+    }
+
+    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+
+    .popup-google
+    {
+        top: 66%;
+    }
+
+    #wheel
+    {
+        width: 320px !important;
+        height: 320px !important;
+        right: -9.5% !important;
+    }
+
+    .circle-container img
+    {
+        width: 22.5% !important;
+        top: 36.4% !important;
+        left: 39.8% !important;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 29%;
+    }
+
+    .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+}
+
+/*#endregion*/
+
+/*#region 360/640 Note 2, S5, LG G3 */
+
+@media screen and (min-width:360px)
+{
+
+
+    /*#region General*/
+
+    .popup-language.main
+    {
+        top: 42%;
+    }
+
+    .popup-language
+    {
+        top: 21%;
+    }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 3%;
+    }
+
+    .icon-and-recent
+    {
+        height: 54px;
+    }
+
+    label.days-label
+    {
+        padding-top: 1.5%;
+    }
+
+    input[type=checkbox].days:checked + label.days-label
+    {
+        padding-top: 1.5%;
+    }
+
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .he #wheel
+    {
+        width: 320px;
+        height: 320px;
+        right: 2%;
+    }
+
+    .popup-google.he
+    {
+        top: 73%;
+    }
+
+    .rtl .circle-container img
+    {
+        width: 24.7%;
+        top: 36.6%;
+        left: 37%;
+    }
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 31%;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 54%;
+    }
+
+    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+
+    .popup-google
+    {
+        top: 66%;
+    }
+
+    #wheel
+    {
+        width: 320px;
+        height: 320px;
+        right: -2.5%;
+    }
+
+    .circle-container img
+    {
+        width: 25.5%;
+        top: 36.4%;
+        left: 38%;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 29%;
+    }
+
+    .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+}
+
+/*#endregion*/
+
+/*#region 384/592   Nexus 4 */
+
+@media screen and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2)‏
+{
+
+    /*#region General*/
+
+    .popup-language
+    {
+        top: 24%;
+    }
+
+        .popup-language.main
+        {
+            top: 42%;
+        }
+
+    .popup-google
+    {
+        top: 70%;
+    }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 3%;
+    }
+
+    .icon-and-recent
+    {
+        height: 58px;
+    }
+
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .he #wheel
+    {
+        width: 320px !important;
+        height: 320px !important;
+        right: 5% !important;
+    }
+
+    .rtl .circle-container img
+    {
+        width: 22.5% !important;
+        top: 36% !important;
+        left: 39.4% !important;
+    }
+
+
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 32%;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 57%;
+    }
+
+    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+
+    #wheel
+    {
+        width: 320px;
+        height: 320px;
+        right: -4.5%;
+    }
+
+    .circle-container img
+    {
+        width: 23.7%;
+        top: 36.4%;
+        left: 37.7%;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 32%;
+    }
+
+    .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+
+    /*#endregion*/
+}
+
+/*#endregion*/
+
+/*#region iPhone 4 Specific*/
+
+@media screen and (device-aspect-ratio: 2/3), screen and (width: 960px) and (height: 640px), screen and (aspect-ratio: 320/568) and (device-aspect-ratio: 320/568)‏‏, screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)
+{
+
+    /*#region General*/
+
+
+    .popup-language
+    {
+        top: 25%;
+    }
+
+        .popup-language.main
+        {
+            top: 51%;
+        }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 27%;
+    }
+
+    .icon-and-recent
+    {
+        height: 44px;
+    }
+
+    label.days-label
+    {
+        text-align: center;
+        padding-left: 0 !important;
+    }
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .rtl input[type=checkbox].days:checked + label.days-label
+    {
+        padding-right: 0 !important;
+    }
+
+    .popup-google.he
+    {
+        top: 66%;
+    }
+
+    .he #wheel
+    {
+        width: 250px !important;
+        height: 250px !important;
+        right: 6% !important;
+    }
+
+    /* small is to the right, big is to the left*/
+
+    .rtl .circle-container img
+    {
+        width: 20%;
+        top: 36.5%;
+        left: 40%;
+    }
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 20%;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 61%;
+    }
+
+    .ok.rtl
+    {
+        right: -2% !important;
+    }
+
+    #defaultTime.rtl
+    {
+        left: 7%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+    input[type=checkbox].days:checked + label.days-label
+    {
+        padding: 2px;
+        text-align: center;
+    }
+
+    .popup-google
+    {
+        top: 61%;
+    }
+
+    #wheel
+    {
+        width: 250px !important;
+        height: 250px !important;
+        right: -4.8% !important;
+    }
+
+    .circle-container img
+    {
+        width: 22%;
+        top: 36.5%;
+        left: 37%;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 22%;
+    }
+
+    .ok
+    {
+        right: 2.5% !important;
+    }
+
+
+    /*#endregion*/
+
+}
+
+/*#endregion*/
+
+/*#region Specific iPhone 6*/
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+{
+    /*#region General*/
+    .popup-language;
+    {
+        top: 21%;
+    }
+
+    .popup-language.main
+    {
+        top: 42%;
+    }
+
+    .popup-google.he
+    {
+        top: 74%;
+    }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 27%;
+    }
+
+    .icon-and-recent
+    {
+        height: 57px;
+    }
+
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .he #wheel
+    {
+        width: 300px !important;
+        height: 300px !important;
+        right: 7% !important;
+    }
+
+    .rtl .circle-container img
+    {
+        width: 23% !important;
+        top: 36% !important;
+        left: 38% !important;
+    }
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 32% !important;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 54% !important;
+    }
+
+    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+
+    .popup-google
+    {
+        top: 66%;
+    }
+
+    #wheel
+    {
+        width: 300px !important;
+        height: 300px !important;
+        right: -7.5% !important;
+    }
+
+    .circle-container img
+    {
+        width: 22.5% !important;
+        top: 36.4% !important;
+        left: 39.8% !important;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 29% !important;
+    }
+
+    .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+}
+
+
+/*#endregion*/

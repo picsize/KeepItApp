@@ -1,0 +1,25 @@
+﻿
+<div class="container intro-bg fill slide-in-from-left" ng-class="{{pageClass}}">
+    <div class="row" ng-class="(lang == 'he')?'rtl':''">
+        <div class="col-xs-12 final-name-and-score text-center">
+            <label class="orange-text">{{userName}}</label>
+            <label class="white-color">{{langString[lang].score}} {{totalCredits}}</label>
+            <label class="white-color">{{langString[lang].back}}</label>
+            <img src="assets/img/logo.png" alt="logo" />
+            <br /><br />
+            <a href="#/wheel" class="white-color">{{langString[lang].more}}</a>
+        </div>
+    </div>
+</div>
+
+<footer class="final-footer slide-in-from-left">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <button ng-click="goToSettings()" class="white-color btn">{{langString[lang].settings}}</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+

@@ -1,0 +1,102 @@
+﻿
+<div class="container fill slide-in-from-left" ng-class="{{pageClass}}">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <img src="assets/img/logo.png" alt="logo" />
+        </div>
+    </div>
+
+    <div class="row" id="select-lang" style="visibility:visible; margin-top:10%;" ng-show="fromFinal">
+        <div class="col-xs-12">
+            <button class="btn general-btn btn-shadow round-btn white-bg" ng-class="(lang == 'he') ? ['btn-text-right', 'rtl'] : 'btn-text-left'" ng-model="languageBtn" ng-click="openHideLanguagePopup()" ng-init="init()">{{languageBtn}}</button>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="alarms" ng-class="(showLangPopup) ? 'slide-down margin-30' : ''">
+        <div class="row" ng-class="(lang == 'he') ? 'rtl' : ''">
+            <div class="col-xs-12 white-bg">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="radio" name="setting-alarm" id="without-alarm" class="black-radio" ng-checked="(setAlarm) ? false : true"/>
+                        <label for="without-alarm" class="black-radio-label grey-color" ng-click="check(false)">{{langString[lang].withoutAlarm}}</label>
+                        <br />
+                        <input type="radio" name="setting-alarm" id="with-alarm" class="black-radio" ng-checked="(setAlarm) ? true : false"/>
+                        <label for="with-alarm" class="black-radio-label grey-color" ng-click="check(true)">{{langString[lang].withAlarm}}</label>
+                    </div>
+                </div>
+                <div class="row" ng-class="(alpha) ? 'alpha' : ''">
+                    <div class="col-xs-12 {{lang}}">
+                        <div class="col-xs-6 time">
+                            <div class="">
+                                <!--<h1 class="grey-color" ng-click="openAlarmPopup('alarmTime')">{{alarmTime | date: "HH:mm"}}</h1>-->
+                                <input type="button" id="alarmTime" class="grey-color clock" value="{{alarmTime}}" ng-disabled="isDisable" ng-class="(lang == 'he') ? 'rtl' : ''"/>
+                            </div>
+                        </div>
+                        <div class="col-xs-6  time">
+                            <div class="">
+                                <!--<h1 class="grey-color" ng-click="openAlarmPopup('defaultTime')">{{defaultTime | date: "HH:mm"}}</h1>-->
+                                <input type="button" class="grey-color clock" id="defaultTime" value="{{getTime(0)}}" ng-disabled="isDisable" ng-class="(lang == 'he') ? 'rtl' : ''"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-class="(alpha) ? 'alpha' : ''">
+                    <div class="col-xs-12">
+                        <input type="checkbox" name="days" id="Sunday" ng-checked="sun" ng-model="sun" class="days"  ng-disabled="isDisable"/>
+                        <label for="Sunday" class="days-label">{{langString[lang].Sun}}</label>
+
+                        <input type="checkbox" name="days" id="Monday" ng-checked="mon" ng-model="mon" class="days"  ng-disabled="isDisable"/>
+                        <label for="Monday" class="days-label">{{langString[lang].Mon}}</label>
+
+                        <input type="checkbox" name="days" id="Tuesday" ng-checked="tue" ng-model="tue" class="days"  ng-disabled="isDisable"/>
+                        <label for="Tuesday" class="days-label">{{langString[lang].Tue}}</label>
+
+                        <input type="checkbox" name="days" id="Wednesday" ng-checked="wed" ng-model="wed" class="days"  ng-disabled="isDisable"/>
+                        <label for="Wednesday" class="days-label">{{langString[lang].Wed}}</label>
+
+                        <input type="checkbox" name="days" id="Thursday" ng-checked="thu" ng-model="thu" class="days"  ng-disabled="isDisable"/>
+                        <label for="Thursday" class="days-label">{{langString[lang].Thu}}</label>
+
+                        <input type="checkbox" name="days" id="Friday" ng-checked="fri" ng-model="fri" class="days"  ng-disabled="isDisable"/>
+                        <label for="Friday" class="days-label">{{langString[lang].Fri}}</label>
+
+                        <input type="checkbox" name="days" id="Saturday" ng-checked="sat" ng-model="sat" class="days"  ng-disabled="isDisable"/>
+                        <label for="Saturday" class="days-label">{{langString[lang].Sat}}</label>
+                    </div>
+                </div>
+                <div class="row" ng-class="(alpha) ? 'alpha' : ''">
+                    <div class="col-xs-12">
+                        <br />
+                        <input type="checkbox" name="days" id="sound" class="alarms-checkbox"  ng-disabled="isDisable" ng-model="sound"/>
+                        <label for="sound" class="alarms-checkbox-label grey-color" ng-disabled="isDisable">{{langString[lang].withSound}}</label>
+                        <!--<br />
+                        <label class="ringtone grey-color">{{langString[lang].defaultSound}} - KeepitApp</label>-->
+                        <br />
+                        <input type="checkbox" name="days" id="vibrate" ng-model="vibration" class="alarms-checkbox"  ng-disabled="isDisable"/>
+                        <label for="vibrate" class="alarms-checkbox-label grey-color">{{langString[lang].vibration}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container slide-in-from-left">
+        <div class="row">
+            <div class="col-xs-12" ng-hide="fromFinal">
+                <button ng-click="saveAlarms()" class="btn general-btn btn-shadow round-btn orange-btn register-btn">{{langString[lang].btn}}</button>
+            </div>
+            <div class="col-xs-12" ng-show="fromFinal">
+                <button ng-click="saveSettings()" class="btn general-btn btn-shadow round-btn orange-btn register-btn">{{langString[lang].addAlarmBtn}}</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="popup-language popup-bg-message setting-page" ng-show="showLangPopup">
+    <ul ng-class="(lang == 'he') ? ['text-right', 'rtl'] : 'text-left'" class="list-group language-holder">
+        <li ng-click="changeLanguage('he')" class="list-group-item language" ng-class="(lang == 'he') ? 'focus' : ''">{{langString[lang].hebrew}}</li>
+        <li ng-click="changeLanguage('en')" class="list-group-item language" ng-class="(lang == 'he') ? '' : 'focus'">{{langString[lang].english}}</li>
+    </ul>
+</div>

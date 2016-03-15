@@ -1,0 +1,34 @@
+﻿
+<div class="container fill" ng-class="{{pageClass}}">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <img class="big-to-small" src="assets/img/logo.png" alt="logo" />
+
+        </div>
+    </div>
+    <div class="row" id="select-lang">
+        <div class="col-xs-12">
+            <h4 class="white-color" ng-class="(lang == 'he') ? ['text-right', 'rtl'] : 'text-left'">{{langString[lang].label}}</h4>
+            <button class="btn general-btn btn-shadow round-btn white-bg" ng-class="(lang == 'he') ? ['btn-text-right', 'rtl'] : 'btn-text-left'" ng-model="languageBtn" ng-click="openHideLanguagePopup()" ng-init="init()">{{languageBtn}}</button>
+        </div>
+    </div>
+</div>
+
+<footer id="language-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="#/register" class="btn general-btn btn-shadow round-btn orange-btn register-btn">{{langString[lang].btn}}</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div class="popup-language popup-bg-message main" ng-show="showLangPopup">
+    <ul ng-class="(lang == 'he') ? ['text-right', 'rtl'] : 'text-left'" class="list-group language-holder">
+        <li ng-click="changeLanguage('he')" class="list-group-item language" ng-class="(lang == 'he') ? 'focus' : ''">{{langString[lang].hebrew}}</li>
+        <li ng-click="changeLanguage('en')" class="list-group-item language" ng-class="(lang == 'he') ? '' : 'focus'">{{langString[lang].english}}</li>
+    </ul>
+</div>
+
