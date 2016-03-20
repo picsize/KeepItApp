@@ -113,7 +113,7 @@
         <p ng-class="(lang == 'he') ? 'rtl': ''">
             {{langString[lang].googleText}}
         </p>
-        <button ng-click="showHidePopup(null,$event)" ng-class="(lang == 'he') ? 'rtl': ''">{{langString[lang].popupBtn}}</button>
+        <button ng-click="showHidePopup(null,$event); startBonusCalculation(thisQuestion); startTimeToAnsertInterval();" ng-class="(lang == 'he') ? 'rtl': ''">{{langString[lang].popupBtn}}</button>
     </div>
 
     <div class="popup-intro-5sec popup-bg-message" ng-show="intro5sec || intro2days">

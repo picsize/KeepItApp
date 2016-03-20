@@ -1133,7 +1133,6 @@
         }
 
         $scope.checkConditions = function () {
-            debugger;
             var qCountNew = localStorage.getItem('qCountNew') * 1;
             var qCountAnswered = localStorage.getItem('qCountAnswered') * 1;
             var qCountRemain = localStorage.getItem('qCountRemain') * 1;
@@ -1162,7 +1161,7 @@
                         }
                     }, 50);
                 } else {
-                    if ($scope.thisQuestion.id != $scop.answeredQuestion.id) {
+                    if ($scope.thisQuestion.id == $scope.answeredQuestion.id) {
                         $scope.answeredQuestion = '';
                         $scope.getQuestion('answered');
                     }
@@ -1333,8 +1332,6 @@
                     $scope.showPopup = true;
                     $scope.google = true;
                     localStorage.setItem('showIntro', 'true');
-                    $scope.startTimeToAnsertInterval();
-                    $scope.startBonusCalculation($scope.thisQuestion);
                     angular.element('body').css('overflow', 'hidden');
                 } break;
                 case 'old': {
