@@ -232,6 +232,11 @@ footer {
     margin-top: 14%;
 }
 
+.time
+{
+    text-align:center;
+}
+
 .time input {
     font-size: 52px;
     margin: 0;
