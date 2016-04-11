@@ -1,18 +1,20 @@
-﻿/*#region 320/480 iPhone 4, iPhone 3 3GS*/
+﻿
+/*#region 414/736 iPhone 6+ */
 
-@media screen and (min-width:320px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5)‏
+@media screen and (min-width:414px)
 {
+
 
     /*#region General*/
 
     .popup-language
     {
-        top: 25%;
+        top: 22% !important;
     }
 
         .popup-language.main
         {
-            top: 51%;
+            top: 42%;
         }
 
     .popover
@@ -33,21 +35,29 @@
 
     .order ul:first-child li label
     {
-        top: 27%;
+        top: 16%;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 52% !important;
     }
 
     .icon-and-recent
     {
-        height: 44px;
+        height: 64px;
     }
+
 
     /*#endregion*/
 
     /*#region Hebrew*/
 
-    .rtl input[type=checkbox].days:checked + label.days-label
+    .he #wheel
     {
-        padding-right: 0 !important;
+        width: 320px !important;
+        height: 320px !important;
+        right: 9% !important;
     }
 
     .popup-google.he
@@ -55,18 +65,11 @@
         top: 66%;
     }
 
-    .he #wheel
-    {
-        width: 230px;
-        height: 230px;
-        right: 10%;
-    }
-
     .rtl .circle-container img
     {
-        width: 20%;
-        top: 36.5%;
-        left: 40%;
+        width: 21.7% !important;
+        top: 36.4% !important;
+        left: 38.5% !important;
     }
 
     .question h3.rtl
@@ -76,142 +79,7 @@
 
     .keepitApp-btn.rtl
     {
-        margin-left: 28%;
-    }
-
-    .popup-intro-5sec, .popup-5sec
-    {
-        top: 61%;
-    }
-
-    /*#endregion*/
-
-    /*#region English*/
-
-    input[type=checkbox].days:checked + label.days-label
-    {
-        padding: 2px;
-        text-align: center;
-    }
-
-    .popup-google
-    {
-        top: 61%;
-    }
-
-    #wheel
-    {
-        width: 230px;
-        height: 230px;
-        right: -10.5%;
-    }
-
-    .circle-container img
-    {
-        width: 20%;
-        top: 36.5%;
-        left: 40%;
-    }
-
-    .question h3
-    {
-        font-size: 160%;
-    }
-
-    .keepitApp-btn
-    {
-        margin-left: 28%;
-    }
-
-
-
-
-    /*#endregion*/
-
-}
-
-/*#endregion*/
-
-/*#region 320/568 iPhone 5 */
-
-@media screen and (min-width:320px) and (min-height:568px)
-{
-
-
-    /*#region General*/
-
-    .popup-language
-    {
-        top: 21%;
-    }
-
-        .popup-language.main
-        {
-            top: 44%;
-        }
-
-    .popover
-    {
-        top: 27% !important;
-        left: 12% !important;
-    }
-
-    .final-name-and-score
-    {
-        margin: 27% 0 0 0;
-    }
-
-    .final-footer button
-    {
-        margin-bottom: 2%;
-    }
-
-    .order ul:first-child li label
-    {
-        top: 27%;
-    }
-
-    .icon-and-recent
-    {
-        height: 47px;
-    }
-
-    /*#endregion*/
-
-    /*#region Hebrew*/
-
-    .he #wheel
-    {
-        width: 230px;
-        height: 230px;
-        right: 10%;
-    }
-
-    .popup-google.he
-    {
-        top: 71%;
-    }
-
-    .rtl .circle-container img
-    {
-        width: 20%;
-        top: 36.5%;
-        left: 40.2%;
-    }
-
-    .question h3.rtl
-    {
-        font-size: 160%;
-    }
-
-    .keepitApp-btn.rtl
-    {
-        margin-left: 29%;
-    }
-
-    .popup-intro-5sec, .popup-5sec
-    {
-        top: 57%;
+        margin-left: 33%;
     }
 
     .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
@@ -223,6 +91,7 @@
 
     /*#region English*/
 
+
     .popup-google
     {
         top: 66%;
@@ -230,16 +99,16 @@
 
     #wheel
     {
-        width: 230px;
-        height: 230px;
-        right: -10.5%;
+        width: 320px !important;
+        height: 320px !important;
+        right: -9.5% !important;
     }
 
     .circle-container img
     {
-        width: 20%;
-        top: 36.5%;
-        left: 40.2%;
+        width: 22.5% !important;
+        top: 36.4% !important;
+        left: 39.8% !important;
     }
 
     .question h3
@@ -256,7 +125,6 @@
     {
         font-size: 126%;
     }
-
 
     /*#endregion*/
 }
@@ -394,23 +262,25 @@
 
 /*#endregion*/
 
-/*#region 414/736 iPhone 6+ */
+/*#region Specific iPhone 6*/
 
-@media screen and (min-width:414px)
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
 {
-
-
     /*#region General*/
-
-    .popup-language
+    .popup-language;
     {
-        top: 22% !important;
+        top: 21%;
     }
 
-        .popup-language.main
-        {
-            top: 42%;
-        }
+    .popup-language.main
+    {
+        top: 42%;
+    }
+
+    .popup-google.he
+    {
+        top: 74%;
+    }
 
     .popover
     {
@@ -430,17 +300,12 @@
 
     .order ul:first-child li label
     {
-        top: 16%;
-    }
-
-    .popup-intro-5sec, .popup-5sec
-    {
-        top: 52% !important;
+        top: 27%;
     }
 
     .icon-and-recent
     {
-        height: 64px;
+        height: 57px;
     }
 
 
@@ -450,21 +315,16 @@
 
     .he #wheel
     {
-        width: 320px !important;
-        height: 320px !important;
-        right: 9% !important;
-    }
-
-    .popup-google.he
-    {
-        top: 66%;
+        width: 300px !important;
+        height: 300px !important;
+        right: 7% !important;
     }
 
     .rtl .circle-container img
     {
-        width: 21.7% !important;
-        top: 36.4% !important;
-        left: 38.5% !important;
+        width: 23% !important;
+        top: 36% !important;
+        left: 38% !important;
     }
 
     .question h3.rtl
@@ -474,7 +334,12 @@
 
     .keepitApp-btn.rtl
     {
-        margin-left: 33%;
+        margin-left: 32% !important;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 54% !important;
     }
 
     .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
@@ -494,9 +359,9 @@
 
     #wheel
     {
-        width: 320px !important;
-        height: 320px !important;
-        right: -9.5% !important;
+        width: 300px !important;
+        height: 300px !important;
+        right: -7.5% !important;
     }
 
     .circle-container img
@@ -513,7 +378,7 @@
 
     .keepitApp-btn
     {
-        margin-left: 29%;
+        margin-left: 29% !important;
     }
 
     .popup-answer:not(.popup-old-question):not(.popup-hint) p
@@ -523,6 +388,7 @@
 
     /*#endregion*/
 }
+
 
 /*#endregion*/
 
@@ -797,6 +663,137 @@
 
 /*#endregion*/
 
+/*#region 320/568 iPhone 5 */
+
+@media screen and (min-width:320px) and (min-height:568px)
+{
+
+
+    /*#region General*/
+
+    .popup-language
+    {
+        top: 21%;
+    }
+
+        .popup-language.main
+        {
+            top: 44%;
+        }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 27%;
+    }
+
+    .icon-and-recent
+    {
+        height: 47px;
+    }
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .he #wheel
+    {
+        width: 230px;
+        height: 230px;
+        right: 10%;
+    }
+
+    .popup-google.he
+    {
+        top: 71%;
+    }
+
+    .rtl .circle-container img
+    {
+        width: 20%;
+        top: 36.5%;
+        left: 40.2%;
+    }
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 29%;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 57%;
+    }
+
+    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+    .popup-google
+    {
+        top: 66%;
+    }
+
+    #wheel
+    {
+        width: 230px;
+        height: 230px;
+        right: -10.5%;
+    }
+
+    .circle-container img
+    {
+        width: 20%;
+        top: 36.5%;
+        left: 40.2%;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 29%;
+    }
+
+    .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+
+    /*#endregion*/
+}
+
+/*#endregion*/
+
 /*#region iPhone 4 Specific*/
 
 @media screen and (device-aspect-ratio: 2/3), screen and (width: 960px) and (height: 640px), screen and (aspect-ratio: 320/568) and (device-aspect-ratio: 320/568)‏‏, screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)
@@ -953,25 +950,22 @@
 
 /*#endregion*/
 
-/*#region Specific iPhone 6*/
+/*#region 320/480 iPhone 3 3GS*/
 
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+@media screen and (min-width:320px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5)‏
 {
+
     /*#region General*/
-    .popup-language;
+
+    .popup-language
     {
-        top: 21%;
+        top: 25%;
     }
 
-    .popup-language.main
-    {
-        top: 42%;
-    }
-
-    .popup-google.he
-    {
-        top: 74%;
-    }
+        .popup-language.main
+        {
+            top: 51%;
+        }
 
     .popover
     {
@@ -996,26 +990,35 @@
 
     .icon-and-recent
     {
-        height: 57px;
+        height: 44px;
     }
-
 
     /*#endregion*/
 
     /*#region Hebrew*/
 
+    .rtl input[type=checkbox].days:checked + label.days-label
+    {
+        padding-right: 0 !important;
+    }
+
+    .popup-google.he
+    {
+        top: 66%;
+    }
+
     .he #wheel
     {
-        width: 300px !important;
-        height: 300px !important;
-        right: 7% !important;
+        width: 230px;
+        height: 230px;
+        right: 10%;
     }
 
     .rtl .circle-container img
     {
-        width: 23% !important;
-        top: 36% !important;
-        left: 38% !important;
+        width: 20%;
+        top: 36.5%;
+        left: 40%;
     }
 
     .question h3.rtl
@@ -1025,41 +1028,41 @@
 
     .keepitApp-btn.rtl
     {
-        margin-left: 32% !important;
+        margin-left: 28%;
     }
 
     .popup-intro-5sec, .popup-5sec
     {
-        top: 54% !important;
-    }
-
-    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
-    {
-        font-size: 126%;
+        top: 61%;
     }
 
     /*#endregion*/
 
     /*#region English*/
 
+    input[type=checkbox].days:checked + label.days-label
+    {
+        padding: 2px;
+        text-align: center;
+    }
 
     .popup-google
     {
-        top: 66%;
+        top: 61%;
     }
 
     #wheel
     {
-        width: 300px !important;
-        height: 300px !important;
-        right: -7.5% !important;
+        width: 230px;
+        height: 230px;
+        right: -10.5%;
     }
 
     .circle-container img
     {
-        width: 22.5% !important;
-        top: 36.4% !important;
-        left: 39.8% !important;
+        width: 20%;
+        top: 36.5%;
+        left: 40%;
     }
 
     .question h3
@@ -1069,16 +1072,28 @@
 
     .keepitApp-btn
     {
-        margin-left: 29% !important;
+        margin-left: 28%;
     }
 
-    .popup-answer:not(.popup-old-question):not(.popup-hint) p
-    {
-        font-size: 126%;
-    }
+
+
 
     /*#endregion*/
+
 }
 
-
 /*#endregion*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
