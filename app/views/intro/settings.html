@@ -25,20 +25,18 @@
                     </div>
                 </div>
                 <div class="row" ng-class="(alpha) ? 'alpha' : ''">
-                    <div class="col-xs-12 {{lang}}">
-                        <div class="col-xs-6 time">
+                        <div class="time {{lang}}">
                             <div class="">
                                 <!--<h1 class="grey-color" ng-click="openAlarmPopup('alarmTime')">{{alarmTime | date: "HH:mm"}}</h1>-->
                                 <input type="button" id="alarmTime" class="grey-color clock" value="{{alarmTime}}" ng-disabled="isDisable" ng-class="(lang == 'he') ? 'rtl' : ''"/>
                             </div>
                         </div>
-                        <div class="col-xs-6  time">
+                        <div class="time {{lang}}">
                             <div class="">
                                 <!--<h1 class="grey-color" ng-click="openAlarmPopup('defaultTime')">{{defaultTime | date: "HH:mm"}}</h1>-->
                                 <input type="button" class="grey-color clock" id="defaultTime" value="{{getTime(0)}}" ng-disabled="isDisable" ng-class="(lang == 'he') ? 'rtl' : ''"/>
                             </div>
                         </div>
-                    </div>
                 </div>
                 <div class="row" ng-class="(alpha) ? 'alpha' : ''">
                     <div class="col-xs-12">
