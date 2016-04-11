@@ -234,8 +234,15 @@ footer {
 
 .time
 {
-    
+    width:50%;
+    float:right;
+        padding: 0 5%;
 }
+
+    .time.he
+    {
+        float:left;
+    }
 
 .time input {
     font-size: 52px;
