@@ -254,7 +254,8 @@ SPINWHEEL.wheelOfDestiny = (function (targetId, list, customTheme, centerSize, c
                 // spinReverseAngle has not been changed
                 // the pointer angle is not fully "bent" nor "unbent"
                 // the remaining angular distance is less than one "slice" taking into account peg size, else the pointer can bounce back and cover a previous peg.
-                spinReverseAngle = 0;
+
+                //spinReverseAngle = 0;
             }
 
         } else {
