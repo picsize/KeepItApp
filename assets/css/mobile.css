@@ -896,7 +896,12 @@
 
     #defaultTime.rtl
     {
-        left: 7%;
+        left: 40%;
+    }
+
+    #alarmTime.rtl
+    {
+        left:20%;
     }
 
     /*#endregion*/
