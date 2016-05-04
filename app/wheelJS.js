@@ -255,7 +255,7 @@ SPINWHEEL.wheelOfDestiny = (function (targetId, list, customTheme, centerSize, c
                 // the pointer angle is not fully "bent" nor "unbent"
                 // the remaining angular distance is less than one "slice" taking into account peg size, else the pointer can bounce back and cover a previous peg.
 
-                spinReverseAngle = 1;
+                spinReverseAngle = 0;
             }
 
         } else {
@@ -270,7 +270,7 @@ SPINWHEEL.wheelOfDestiny = (function (targetId, list, customTheme, centerSize, c
         if (spinReverseAngle > 0) {
             createPointer(0);
         } else {
-            createPointer(-pointAngle);
+            createPointer(-pointAngle/100);
             //createPointer(0);
         }
     }
