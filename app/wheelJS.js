@@ -347,7 +347,7 @@ SPINWHEEL.wheelOfDestiny = (function (targetId, list, customTheme, centerSize, c
         drawEllipse(fore.context, appRadius, appRadius, wheelRadius / factor, wheelRadius / factor, theme.CentreColour);
         fore.context.save();
         fore.context.translate(appRadius, 5);
-        fore.context.rotate(deg2Rad(bentAngle));
+        //fore.context.rotate(deg2Rad(bentAngle));
         //drawSpike(fore.context, 0, pegSize, pegSize, 0, pegSize * 6, -pegSize, pegSize, theme.PointerColour1);
         fore.context.restore();
     }
