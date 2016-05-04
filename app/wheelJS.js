@@ -255,7 +255,7 @@ SPINWHEEL.wheelOfDestiny = (function (targetId, list, customTheme, centerSize, c
                 // the pointer angle is not fully "bent" nor "unbent"
                 // the remaining angular distance is less than one "slice" taking into account peg size, else the pointer can bounce back and cover a previous peg.
 
-                //spinReverseAngle = 0;
+                spinReverseAngle = 1;
             }
 
         } else {
@@ -270,8 +270,8 @@ SPINWHEEL.wheelOfDestiny = (function (targetId, list, customTheme, centerSize, c
         if (spinReverseAngle > 0) {
             createPointer(0);
         } else {
-            //createPointer(-pointAngle);
-            createPointer(0);
+            createPointer(-pointAngle);
+            //createPointer(0);
         }
     }
 
@@ -347,7 +347,7 @@ SPINWHEEL.wheelOfDestiny = (function (targetId, list, customTheme, centerSize, c
         drawEllipse(fore.context, appRadius, appRadius, wheelRadius / factor, wheelRadius / factor, theme.CentreColour);
         fore.context.save();
         fore.context.translate(appRadius, 5);
-        //fore.context.rotate(deg2Rad(bentAngle));
+        fore.context.rotate(deg2Rad(bentAngle));
         //drawSpike(fore.context, 0, pegSize, pegSize, 0, pegSize * 6, -pegSize, pegSize, theme.PointerColour1);
         fore.context.restore();
     }
