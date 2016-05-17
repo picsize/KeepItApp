@@ -1,4 +1,135 @@
 ﻿
+/*#region 320/568 iPhone 5 */
+
+@media screen and (min-width:320px) and (min-height:568px)
+{
+
+
+    /*#region General*/
+
+    .popup-language
+    {
+        top: 21%;
+    }
+
+        .popup-language.main
+        {
+            top: 44%;
+        }
+
+    .popover
+    {
+        top: 27% !important;
+        left: 12% !important;
+    }
+
+    .final-name-and-score
+    {
+        margin: 27% 0 0 0;
+    }
+
+    .final-footer button
+    {
+        margin-bottom: 2%;
+    }
+
+    .order ul:first-child li label
+    {
+        top: 27%;
+    }
+
+    .icon-and-recent
+    {
+        height: 47px;
+    }
+
+    /*#endregion*/
+
+    /*#region Hebrew*/
+
+    .he #wheel
+    {
+        width: 230px;
+        height: 230px;
+        right: 10%;
+    }
+
+    .popup-google.he
+    {
+        top: 71%;
+    }
+
+    .rtl .circle-container img
+    {
+        width: 20%;
+        top: 36.5%;
+        left: 40.2%;
+    }
+
+    .question h3.rtl
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn.rtl
+    {
+        margin-left: 29%;
+    }
+
+    .popup-intro-5sec, .popup-5sec
+    {
+        top: 57%;
+    }
+
+    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+    /*#endregion*/
+
+    /*#region English*/
+
+    .popup-google
+    {
+        top: 66%;
+    }
+
+    #wheel
+    {
+        width: 230px;
+        height: 230px;
+        right: -10.5%;
+    }
+
+    .circle-container img
+    {
+        width: 20%;
+        top: 36.5%;
+        left: 40.2%;
+    }
+
+    .question h3
+    {
+        font-size: 160%;
+    }
+
+    .keepitApp-btn
+    {
+        margin-left: 29%;
+    }
+
+    .popup-answer:not(.popup-old-question):not(.popup-hint) p
+    {
+        font-size: 126%;
+    }
+
+
+    /*#endregion*/
+}
+
+/*#endregion*/
+
 /*#region 414/736 iPhone 6+ */
 
 @media screen and (min-width:414px)
@@ -394,10 +525,8 @@
 
 /*#region 360/640 Note 2, S5, LG G3 */
 
-@media screen and (min-width:360px)
+@media screen and (min-width:360px), screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3)
 {
-
-
     /*#region General*/
 
     .popup-language.main
@@ -650,137 +779,6 @@
     .keepitApp-btn
     {
         margin-left: 32%;
-    }
-
-    .popup-answer:not(.popup-old-question):not(.popup-hint) p
-    {
-        font-size: 126%;
-    }
-
-
-    /*#endregion*/
-}
-
-/*#endregion*/
-
-/*#region 320/568 iPhone 5 */
-
-@media screen and (min-width:320px) and (min-height:568px)
-{
-
-
-    /*#region General*/
-
-    .popup-language
-    {
-        top: 21%;
-    }
-
-        .popup-language.main
-        {
-            top: 44%;
-        }
-
-    .popover
-    {
-        top: 27% !important;
-        left: 12% !important;
-    }
-
-    .final-name-and-score
-    {
-        margin: 27% 0 0 0;
-    }
-
-    .final-footer button
-    {
-        margin-bottom: 2%;
-    }
-
-    .order ul:first-child li label
-    {
-        top: 27%;
-    }
-
-    .icon-and-recent
-    {
-        height: 47px;
-    }
-
-    /*#endregion*/
-
-    /*#region Hebrew*/
-
-    .he #wheel
-    {
-        width: 230px;
-        height: 230px;
-        right: 10%;
-    }
-
-    .popup-google.he
-    {
-        top: 71%;
-    }
-
-    .rtl .circle-container img
-    {
-        width: 20%;
-        top: 36.5%;
-        left: 40.2%;
-    }
-
-    .question h3.rtl
-    {
-        font-size: 160%;
-    }
-
-    .keepitApp-btn.rtl
-    {
-        margin-left: 29%;
-    }
-
-    .popup-intro-5sec, .popup-5sec
-    {
-        top: 57%;
-    }
-
-    .rtl .popup-answer:not(.popup-old-question):not(.popup-hint) p
-    {
-        font-size: 126%;
-    }
-
-    /*#endregion*/
-
-    /*#region English*/
-
-    .popup-google
-    {
-        top: 66%;
-    }
-
-    #wheel
-    {
-        width: 230px;
-        height: 230px;
-        right: -10.5%;
-    }
-
-    .circle-container img
-    {
-        width: 20%;
-        top: 36.5%;
-        left: 40.2%;
-    }
-
-    .question h3
-    {
-        font-size: 160%;
-    }
-
-    .keepitApp-btn
-    {
-        margin-left: 29%;
     }
 
     .popup-answer:not(.popup-old-question):not(.popup-hint) p
