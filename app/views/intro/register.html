@@ -72,8 +72,8 @@
         </form>
         <div class="row">
             <div class="col-xs-12" ng-class="(lang == 'he')?'text-left':'text-right'">
-                <a ng-click="showForm()" class="btn grey-color">{{langString[lang].cancel}}</a>
-                <a ng-click="showForm()" class="btn grey-color" style="font-weight:bold;">{{langString[lang].ok}}</a>
+                <a ng-click="showForm(false)" class="btn grey-color">{{langString[lang].cancel}}</a>
+                <a ng-click="showForm(true)" class="btn grey-color" style="font-weight:bold;">{{langString[lang].ok}}</a>
             </div>
         </div>
     </div>

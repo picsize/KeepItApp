@@ -205,7 +205,7 @@
             } else {
                 var callback = function (buttonIndex) {
                     //1-> yes   2-> no
-                    (buttonIndex == 1) ? $scope.login() : View.changeView('final');
+                    (buttonIndex == 1) ? $scope.login() : View.changeView('settings');
                 }
 
                 Message.showConfirm($scope.langString[$scope.lang].registerTitle,
@@ -314,13 +314,17 @@
                 .error(function () { alert('error'); });
         }
 
-        $scope.showForm = function () {
-            if ($scope.isShown) {
-                $scope.sendEmail();
+        $scope.showForm = function (show) {
+            if (show) {
+                if ($scope.isShown) {
+                    $scope.sendEmail();
+                } else {
+                    ($scope.langString[$scope.lang].ok == 'כן') ? $scope.langString[$scope.lang].ok = 'שלח' : $scope.langString[$scope.lang].ok = 'Send';
+                    ($scope.langString[$scope.lang].cancel == 'לא') ? $scope.langString[$scope.lang].cancel = 'ביטול' : $scope.langString[$scope.lang].cancel = 'Cancel';
+                    $scope.isShown = !$scope.isShown;
+                }
             } else {
-                ($scope.langString[$scope.lang].ok == 'כן') ? $scope.langString[$scope.lang].ok = 'שלח' : $scope.langString[$scope.lang].ok = 'Send';
-                ($scope.langString[$scope.lang].cancel == 'לא') ? $scope.langString[$scope.lang].cancel = 'ביטול' : $scope.langString[$scope.lang].cancel = 'Cancel';
-                $scope.isShown = !$scope.isShown;
+                $scope.showHidePopup(1);
             }
         }
 
