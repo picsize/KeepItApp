@@ -197,7 +197,8 @@
             if ($scope.validateInput($scope.email) && $scope.validateInput($scope.password) && $scope.validateInput($scope.name)) { //
                 $scope.login();
             } else {
-                Message.showConfirm('הודעה','כותרת');
+                var res = Message.showConfirm($scope.langString[$scope.lang].registerTitle, $scope.langString[$scope.lang].messageTitle, { yes: $scope.langString[$scope.lang].ok, no: $scope.langString[$scope.lang].cancel });
+                alert('res = ' + res);
                 //Message.showMessage($scope.langString[$scope.lang].inputVerification, $scope.langString[$scope.lang].messageTitle, $scope.langString[$scope.lang].btn);
             }
         }

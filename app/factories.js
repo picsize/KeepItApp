@@ -30,13 +30,13 @@ var factories = {
                 alert(message);
             }
         }
-        this.showConfirm = function (message, title) {
+        this.showConfirm = function (message, title, btns) {
             if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
                 var callback = function (buttonIndex) {
-                    alert(buttonIndex);
+                    //alert(buttonIndex);
                     return buttonIndex;
                 }
-                navigator.notification.confirm(message, callback, title, ['כן', 'לא']);
+                navigator.notification.confirm(message, callback, title, [btns.yes, btns.no]);
             } else {
                 return confirm(message);
             }
