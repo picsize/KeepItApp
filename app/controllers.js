@@ -101,7 +101,8 @@
                 accountInactive: 'משתמש חסום',
                 incorrectEmail: 'כתובת מייל לא נכונה',
                 loginComplete: 'התחברת בהצלחה',
-                registerTitle: 'האם הופנתה לאפליקציה על ידי החברה שאתה עובד בה?',
+                registerTitle: 'האם הופנת לאפליקציה על ידי החברה שאתה עובד בה?',
+                registerPopTitle:'האם ברצונך לשלוח הודעה למפעיל?',
                 ok: 'כן',
                 cancel: 'לא',
                 lastName: 'שם משפחה',
@@ -129,6 +130,7 @@
                 incorrectEmail: 'Incorrect email',
                 loginComplete: 'Login success',
                 registerTitle: 'Did you reffer by the company you work in?',
+                registerPopTitle: 'Do you want to send message to tech support?',
                 ok: 'Yes',
                 cancel: 'No',
                 lastName: 'Last name',
@@ -194,13 +196,18 @@
 
         //login
         $scope.loginToApp = function () {
+            ($scope.timesToLogin < 1) ? $scope.loginConditions() : $scope.checkIfOpenEmailPopup();
+        }
+
+        $scope.loginConditions = function () {
             if ($scope.validateInput($scope.email) && $scope.validateInput($scope.password) && $scope.validateInput($scope.name)) { //
                 $scope.login();
             } else {
                 var callback = function (buttonIndex) {
-                    alert(buttonIndex);
-                    //return buttonIndex;
+                    //1-> yes   2-> no
+                    (buttonIndex == 1) ? $scope.login() : View.changeView('final');
                 }
+
                 Message.showConfirm($scope.langString[$scope.lang].registerTitle,
                     $scope.langString[$scope.lang].messageTitle,
                     { yes: $scope.langString[$scope.lang].ok, no: $scope.langString[$scope.lang].cancel },
