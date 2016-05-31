@@ -194,9 +194,10 @@
 
         //login
         $scope.loginToApp = function () {
-            if ($scope.validateInput($scope.email) && $scope.validateInput($scope.password) && $scope.validateInput($scope.name)) {
+            if ($scope.validateInput($scope.email) && $scope.validateInput($scope.password) && $scope.validateInput($scope.name)) { //
                 $scope.login();
             } else {
+                Message.showConfirm('הודעה','כותרת');
                 //Message.showMessage($scope.langString[$scope.lang].inputVerification, $scope.langString[$scope.lang].messageTitle, $scope.langString[$scope.lang].btn);
             }
         }

@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="password" ng-model="password" placeholder="{{langString[lang].password}}" ng-blur="checkIfUserExists()"/>
+                <input class="white-bg form-control" ng-class="(lang != 'he') ? ['text-left', 'ltr'] : ''" type="password" ng-model="password" placeholder="{{langString[lang].password}}" ng-keyup="checkIfUserExists()"/>
             </div>
         </div>
         <div class="row">
