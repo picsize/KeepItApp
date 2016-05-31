@@ -224,8 +224,11 @@
             };
             Switcher.getSessions('userHandler', 'loginUser', data)
                 .success(function (res) {
-                    alert(JSON.stringify(res));
                     switch (res[0]) {
+                        case 'emptyFields': {
+                            $scope.checkIfOpenEmailPopup();
+                            Message.showMessage($scope.langString[$scope.lang].inputVerification, $scope.langString[$scope.lang].messageTitle, $scope.langString[$scope.lang].btn);
+                        } break;
                         case 'incorrectEmail': {
                             $scope.checkIfOpenEmailPopup();
                             Message.showMessage($scope.langString[$scope.lang].incorrectEmail, $scope.langString[$scope.lang].messageTitle, $scope.langString[$scope.lang].btn);
@@ -257,7 +260,9 @@
                         } break;
                     }
                 })
-                .error(function () { alert('error'); });
+                .error(function () {
+                    //alert('error');
+                });
         }
 
         $scope.checkIfOpenEmailPopup = function () {
