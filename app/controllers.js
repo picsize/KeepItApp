@@ -224,6 +224,7 @@
             };
             Switcher.getSessions('userHandler', 'loginUser', data)
                 .success(function (res) {
+                    alert(JSON.stringify(res));
                     switch (res[0]) {
                         case 'incorrectEmail': {
                             $scope.checkIfOpenEmailPopup();
