@@ -197,8 +197,15 @@
             if ($scope.validateInput($scope.email) && $scope.validateInput($scope.password) && $scope.validateInput($scope.name)) { //
                 $scope.login();
             } else {
-                var res = Message.showConfirm($scope.langString[$scope.lang].registerTitle, $scope.langString[$scope.lang].messageTitle, { yes: $scope.langString[$scope.lang].ok, no: $scope.langString[$scope.lang].cancel });
-                alert('res = ' + res);
+                var callback = function (buttonIndex) {
+                    alert(buttonIndex);
+                    //return buttonIndex;
+                }
+                Message.showConfirm($scope.langString[$scope.lang].registerTitle,
+                    $scope.langString[$scope.lang].messageTitle,
+                    { yes: $scope.langString[$scope.lang].ok, no: $scope.langString[$scope.lang].cancel },
+                    callback);
+                //alert('res = ' + res);
                 //Message.showMessage($scope.langString[$scope.lang].inputVerification, $scope.langString[$scope.lang].messageTitle, $scope.langString[$scope.lang].btn);
             }
         }
